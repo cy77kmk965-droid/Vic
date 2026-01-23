@@ -4,57 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-  <!-- Configurações PWA -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Meu Site">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <!-- Mantém a barra verde -->
   <meta name="theme-color" content="#297B42">
   <meta name="theme-color" content="#297B42" media="(prefers-color-scheme: dark)">
 
   <link rel="manifest" href="manifest.json">
-
   <title>Meu Site</title>
 
   <style>
     :root {
-  --verde-topo: #297B42;
-  --branco-base: #ffffff;
-}
+      --verde-topo: #297B42;
+      --branco-base: #ffffff;
+    }
 
-/* Cor usada pela status bar no modo black-translucent */
-html {
-  background-color: var(--verde-topo);
-}
+    html {
+      background-color: var(--verde-topo);
+    }
 
-/* Conteúdo começa abaixo da status bar */
-body {
-  margin: 0;
-  padding-top: calc(env(safe-area-inset-top) + 12px);
-  min-height: 100vh;
-  background: linear-gradient(
-    var(--branco-base) 0%,
-    var(--branco-base) 100%
-  );
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    body {
+      margin: 0;
+      background-color: var(--branco-base);
+    }
 
-/* Imagem */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border: 0;
-  outline: 0;
-  box-shadow: none;
-}
-
-    /* Corrige espaçamento no iOS */
-    @supports (-webkit-touch-callout: none) {
-      img { margin-bottom: -1px; }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border: 0;
+      outline: 0;
+      box-shadow: none;
     }
   </style>
 </head>
