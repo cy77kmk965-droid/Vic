@@ -15,31 +15,46 @@
   <title>Meu Site</title>
 
   <style>
-    :root {
-      --verde-topo: #297B42;
-      --branco-base: #ffffff;
-    }
+  :root {
+    --verde-topo: #297B42;
+    --altura-topo: 88px; /* status bar + nav bar iOS */
+  }
 
-    html {
-      background-color: var(--verde-topo);
-    }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
 
-    body {
-      margin: 0;
-      background-color: var(--branco-base);
-    }
+  /* Faixa verde SOMENTE da barra */
+  .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--altura-topo);
+    background-color: var(--verde-topo);
+    z-index: 10;
+  }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      border: 0;
-      outline: 0;
-      box-shadow: none;
-    }
-  </style>
-</head>
+  /* Conteúdo começa abaixo da barra */
+  .conteudo {
+    padding-top: var(--altura-topo);
+    background-color: #ffffff;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>
+
 <body>
-  <img src="CA165FE9-DD65-47A9-8A58-BFFD84951249.jpeg" alt="Minha Foto">
+  <div class="top-bar"></div>
+
+  <div class="conteudo">
+    <img src="CA165FE9-DD65-47A9-8A58-BFFD84951249.jpeg" alt="Carteirinha">
+  </div>
 </body>
 </html>
