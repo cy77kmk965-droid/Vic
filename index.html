@@ -52,18 +52,6 @@ img {
   box-shadow: none;
 }
 
-    /* Camada verde sob a status bar (mantém o efeito translúcido da Apple) */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: env(safe-area-inset-top);
-      background: var(--verde-topo);
-      z-index: -1;
-    }
-
     /* Corrige espaçamento no iOS */
     @supports (-webkit-touch-callout: none) {
       img { margin-bottom: -1px; }
