@@ -19,17 +19,22 @@
 
   <style>
     :root {
-      --verde-topo: #297B42;
-      --branco-base: #ffffff;
-    }
+  --verde-topo: #297B42;
+  --branco-base: #ffffff;
+}
 
-    html, body {
+/* Cor usada pela status bar no modo black-translucent */
+html {
+  background-color: var(--verde-topo);
+}
+
+/* Conteúdo começa abaixo da status bar */
+body {
   margin: 0;
   padding-top: calc(env(safe-area-inset-top) + 12px);
   min-height: 100vh;
   background: linear-gradient(
-    var(--verde-topo) 0%,
-    var(--branco-base) 20%,
+    var(--branco-base) 0%,
     var(--branco-base) 100%
   );
   display: flex;
@@ -37,15 +42,15 @@
   align-items: center;
 }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      border: 0;
-      outline: 0;
-      box-shadow: none;
-      margin-top: 0;
-    }
+/* Imagem */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+}
 
     /* Camada verde sob a status bar (mantém o efeito translúcido da Apple) */
     body::before {
