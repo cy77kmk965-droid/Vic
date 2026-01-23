@@ -24,20 +24,18 @@
     }
 
     html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background: linear-gradient(var(--verde-topo) 0%, var(--branco-base) 15%, var(--branco-base) 100%);
-      background-attachment: fixed;
-      color-scheme: light;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-    }
+  margin: 0;
+  padding-top: calc(env(safe-area-inset-top) + 12px);
+  min-height: 100vh;
+  background: linear-gradient(
+    var(--verde-topo) 0%,
+    var(--branco-base) 20%,
+    var(--branco-base) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
     img {
       max-width: 100%;
